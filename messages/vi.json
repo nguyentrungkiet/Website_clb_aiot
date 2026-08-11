@@ -1,0 +1,91 @@
+{
+  "Index": {
+    "title": "Bắt đầu từ con số 0. Kiến tạo sản phẩm công nghệ thật."
+  },
+  "Navbar": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "projects": "Dự án",
+    "competitions": "Cuộc thi",
+    "news": "Tin tức",
+    "join": "Tham gia CLB"
+  },
+  "Hero": {
+    "headline": "BẮT ĐẦU TỪ CON SỐ 0. KIẾN TẠO SẢN PHẨM CÔNG NGHỆ THẬT.",
+    "description": "CLB AIOT thuộc Viện Công nghệ số – Trường Đại học Thủ Dầu Một là môi trường dành cho sinh viên yêu thích AI, IoT, Embedded Systems, Robotics và UAV cùng học tập, nghiên cứu và phát triển các dự án thực tế.",
+    "explore": "Khám phá CLB",
+    "join": "Tham gia AIOT",
+    "projects": "Xem các dự án →"
+  },
+  "Stats": {
+    "members": "Thành viên",
+    "projects": "Dự án thực tế",
+    "competitions": "Cuộc thi",
+    "fields": "Lĩnh vực"
+  },
+  "About": {
+    "title": "AIOT Club là gì?",
+    "description": "AIOT Club là câu lạc bộ sinh viên trực thuộc Viện Công nghệ số, Trường Đại học Thủ Dầu Một. Nơi đây cung cấp môi trường để sinh viên học hỏi từ những kiến thức cơ bản, thực hành qua các dự án thực tế, và tham gia các cuộc thi công nghệ.",
+    "quote": "Bạn không cần giỏi trước khi tham gia. Bạn đến đây để trở nên giỏi hơn."
+  },
+  "Fields": {
+    "title": "Chúng mình đang làm gì?",
+    "ai": {
+      "title": "Artificial Intelligence",
+      "desc": "Machine Learning, Computer Vision & Generative AI."
+    },
+    "iot": {
+      "title": "Internet of Things",
+      "desc": "Sensors, MQTT, Cloud & Smart systems."
+    },
+    "embedded": {
+      "title": "Embedded Systems",
+      "desc": "ESP32, Arduino, STM32 & Microcontrollers."
+    },
+    "robotics": {
+      "title": "Robotics",
+      "desc": "Mobile robots, Automation & Intelligent control."
+    },
+    "uav": {
+      "title": "UAV / Drone",
+      "desc": "Autonomous navigation & Flight systems."
+    },
+    "research": {
+      "title": "Research & Startup",
+      "desc": "Nghiên cứu khoa học & Khởi nghiệp đổi mới."
+    }
+  },
+  "Projects": {
+    "title": "Dự án nổi bật",
+    "view_all": "Xem tất cả dự án",
+    "items": {
+      "1": {
+        "title": "MASS",
+        "desc": "Nền tảng giám sát điện nước thông minh",
+        "tags": "IoT, ESP32, Cloud"
+      },
+      "2": {
+        "title": "Autonomous Drone",
+        "desc": "Hệ thống bay tự hành giám sát nông nghiệp",
+        "tags": "UAV, CV, AI"
+      },
+      "3": {
+        "title": "Smart Robot",
+        "desc": "Robot tự hành tránh vật cản dùng AI",
+        "tags": "Robotics, AI"
+      }
+    }
+  },
+  "CTA": {
+    "title": "Bắt đầu hành trình của bạn tại AIOT Club",
+    "desc": "Không cần kinh nghiệm. Chỉ cần tinh thần học hỏi.",
+    "button": "Đăng ký tham gia"
+  },
+  "Footer": {
+    "desc": "Câu lạc bộ AIOT - Viện Công nghệ số - Trường Đại học Thủ Dầu Một.",
+    "quick_links": "Liên kết",
+    "contact": "Liên hệ",
+    "address": "Phòng Lab ISA, ĐH Thủ Dầu Một",
+    "rights": "Bản quyền thuộc về CLB AIOT."
+  }
+}

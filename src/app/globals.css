@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1767A6;
+  --color-secondary: #05A6C8;
+  --color-navy: #0B2F55;
+  --color-light-bg: #F5F9FC;
+  --color-light-border: #DCEAF3;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: #F5F9FC;
+  --foreground: #0B2F55;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* For now, keep dark mode colors similar or slightly adapted if needed */
+    --background: #0B2F55;
+    --foreground: #F5F9FC;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Subtle tech patterns and utility classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-light-border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.text-gradient {
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  color: transparent;
+}

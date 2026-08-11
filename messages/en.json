@@ -1,0 +1,91 @@
+{
+  "Index": {
+    "title": "Start from zero. Build real tech products."
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "projects": "Projects",
+    "competitions": "Competitions",
+    "news": "News",
+    "join": "Join Club"
+  },
+  "Hero": {
+    "headline": "START FROM ZERO. BUILD REAL TECH PRODUCTS.",
+    "description": "AIOT Club at the Institute of Digital Technology - Thu Dau Mot University is an environment for students passionate about AI, IoT, Embedded Systems, Robotics, and UAVs to learn, research, and develop real-world projects.",
+    "explore": "Explore Club",
+    "join": "Join AIOT",
+    "projects": "View Projects →"
+  },
+  "Stats": {
+    "members": "Members",
+    "projects": "Real Projects",
+    "competitions": "Competitions",
+    "fields": "Tech Fields"
+  },
+  "About": {
+    "title": "What is AIOT Club?",
+    "description": "AIOT Club is a student technology club under the Institute of Digital Technology, Thu Dau Mot University. It provides an environment for students to learn from basics, practice through real projects, and join tech competitions.",
+    "quote": "You don't need to be an expert to join. You come here to become one."
+  },
+  "Fields": {
+    "title": "What are we building?",
+    "ai": {
+      "title": "Artificial Intelligence",
+      "desc": "Machine Learning, Computer Vision & Generative AI."
+    },
+    "iot": {
+      "title": "Internet of Things",
+      "desc": "Sensors, MQTT, Cloud & Smart systems."
+    },
+    "embedded": {
+      "title": "Embedded Systems",
+      "desc": "ESP32, Arduino, STM32 & Microcontrollers."
+    },
+    "robotics": {
+      "title": "Robotics",
+      "desc": "Mobile robots, Automation & Intelligent control."
+    },
+    "uav": {
+      "title": "UAV / Drone",
+      "desc": "Autonomous navigation & Flight systems."
+    },
+    "research": {
+      "title": "Research & Startup",
+      "desc": "Scientific research & Innovation startup."
+    }
+  },
+  "Projects": {
+    "title": "Featured Projects",
+    "view_all": "View all projects",
+    "items": {
+      "1": {
+        "title": "MASS",
+        "desc": "Smart power and water monitoring platform",
+        "tags": "IoT, ESP32, Cloud"
+      },
+      "2": {
+        "title": "Autonomous Drone",
+        "desc": "Autonomous drone system for agricultural monitoring",
+        "tags": "UAV, CV, AI"
+      },
+      "3": {
+        "title": "Smart Robot",
+        "desc": "AI-powered obstacle avoidance robot",
+        "tags": "Robotics, AI"
+      }
+    }
+  },
+  "CTA": {
+    "title": "Start your journey at AIOT Club",
+    "desc": "No experience needed. Just the willingness to learn.",
+    "button": "Register Now"
+  },
+  "Footer": {
+    "desc": "AIOT Club - Institute of Digital Technology - Thu Dau Mot University.",
+    "quick_links": "Quick Links",
+    "contact": "Contact",
+    "address": "ISA Lab, Thu Dau Mot University",
+    "rights": "Copyright by AIOT Club."
+  }
+}
