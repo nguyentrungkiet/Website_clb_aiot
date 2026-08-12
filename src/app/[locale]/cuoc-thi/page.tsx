@@ -6,9 +6,9 @@ export default function CompetitionsPage() {
   const competitions = [
     { year: "2026", name: "Khởi nghiệp sinh viên toàn quốc lần thứ IX", award: "Giải Nhì", icon: Trophy },
     { year: "2026", name: "Cuộc thi Quốc tế UAV Contest", award: "Thành viên tham gia", icon: Award },
-    { year: "2025", name: "Sinh viên với ý tưởng khởi nghiệp", award: "1 Quán quân, 2 Giải Nhì, 1 Giải Ba, 1 Tiềm năng", icon: Trophy },
+    { year: "2025", name: "Sinh viên với ý tưởng khởi nghiệp (TEC2025)", award: "1 Quán quân, 2 Giải Nhì, 1 Giải Ba, 1 Tiềm năng", icon: Trophy },
     { year: "2025", name: "Cuộc thi Startup HUIT", award: "Giải Khuyến khích", icon: Medal },
-    { year: "2024", name: "Sinh viên với ý tưởng khởi nghiệp", award: "Quán quân", icon: Trophy },
+    { year: "2024", name: "Sinh viên với ý tưởng khởi nghiệp (TEC2024)", award: "Quán quân", icon: Trophy },
     { year: "Mới đây", name: "Olympic AI Quốc gia lần I", award: "Đội thi vòng loại", icon: Award },
   ];
 
