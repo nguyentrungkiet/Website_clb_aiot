@@ -35,7 +35,7 @@ export function Footer() {
             <h4 className="text-lg font-bold text-[#0B2F55]">{t("contact")}</h4>
             <div className="flex flex-col space-y-2 text-sm text-gray-600">
               <p>{t("address")}</p>
-              <p>Email: contact@aiot-tdmu.edu.vn</p>
+              <p>Email: <a href="mailto:aiotclub.tdmu@gmail.com" className="hover:underline hover:text-blue-600">aiotclub.tdmu@gmail.com</a></p>
               <p>Fanpage: facebook.com/aiot.tdmu</p>
             </div>
           </div>
