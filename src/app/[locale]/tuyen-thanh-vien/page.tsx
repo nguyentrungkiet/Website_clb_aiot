@@ -3,8 +3,11 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function RecruitmentPage() {
+  const t = useTranslations("RecruitmentPage");
+  
   const [formData, setFormData] = useState({
     name: "",
     studentId: "",
@@ -42,14 +45,14 @@ export default function RecruitmentPage() {
       const result = await res.json();
       
       if (result.success) {
-        setStatusMessage({ type: "success", message: "Gửi đơn đăng ký thành công! Ban chủ nhiệm sẽ sớm liên hệ với bạn." });
+        setStatusMessage({ type: "success", message: t("success_msg") });
         setFormData({ name: "", studentId: "", major: "", phone: "", departments: [], reason: "" });
       } else {
-        setStatusMessage({ type: "error", message: result.message || "Có lỗi xảy ra, vui lòng thử lại." });
+        setStatusMessage({ type: "error", message: result.message || t("error_msg") });
       }
     } catch (error) {
       console.error(error);
-      setStatusMessage({ type: "error", message: "Không thể kết nối đến máy chủ. Vui lòng thử lại sau." });
+      setStatusMessage({ type: "error", message: t("network_error") });
     } finally {
       setIsLoading(false);
     }
@@ -61,15 +64,15 @@ export default function RecruitmentPage() {
       <main className="flex min-h-screen flex-col bg-white">
         <section className="bg-[#0B2F55] py-20 text-center px-4 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">Đăng ký tham gia AIOT Club</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">{t("hero_title")}</h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto relative z-10">
-            Không cần kinh nghiệm lập trình. Chỉ cần bạn có tinh thần học hỏi, dám nghĩ dám làm và đam mê công nghệ.
+            {t("hero_desc")}
           </p>
         </section>
 
         <section className="py-16 container mx-auto px-4 md:px-6 max-w-3xl">
           <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-light-border -mt-24 relative z-20">
-            <h2 className="text-2xl font-bold text-[#0B2F55] mb-8 text-center">Đơn Đăng Ký</h2>
+            <h2 className="text-2xl font-bold text-[#0B2F55] mb-8 text-center">{t("form_title")}</h2>
             
             {statusMessage.message && (
               <div className={`mb-6 p-4 rounded-xl text-center font-medium ${statusMessage.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
@@ -80,56 +83,56 @@ export default function RecruitmentPage() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700">Họ và tên *</label>
+                  <label className="text-sm font-semibold text-gray-700">{t("fields.name")}</label>
                   <input 
                     required 
                     type="text" 
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                     className="w-full h-12 px-4 rounded-xl border border-gray-300 focus:border-[#1767A6] focus:ring-1 focus:ring-[#1767A6] outline-none transition" 
-                    placeholder="Nguyễn Văn A" 
+                    placeholder={t("fields.name_ph")} 
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700">Mã số sinh viên *</label>
+                  <label className="text-sm font-semibold text-gray-700">{t("fields.studentId")}</label>
                   <input 
                     required 
                     type="text" 
                     value={formData.studentId}
                     onChange={(e) => setFormData({...formData, studentId: e.target.value})}
                     className="w-full h-12 px-4 rounded-xl border border-gray-300 focus:border-[#1767A6] focus:ring-1 focus:ring-[#1767A6] outline-none transition" 
-                    placeholder="VD: 20241010" 
+                    placeholder={t("fields.studentId_ph")} 
                   />
                 </div>
               </div>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700">Ngành học *</label>
+                  <label className="text-sm font-semibold text-gray-700">{t("fields.major")}</label>
                   <input 
                     required 
                     type="text" 
                     value={formData.major}
                     onChange={(e) => setFormData({...formData, major: e.target.value})}
                     className="w-full h-12 px-4 rounded-xl border border-gray-300 focus:border-[#1767A6] focus:ring-1 focus:ring-[#1767A6] outline-none transition" 
-                    placeholder="CNTT, KTPM, AI..." 
+                    placeholder={t("fields.major_ph")} 
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700">Số điện thoại *</label>
+                  <label className="text-sm font-semibold text-gray-700">{t("fields.phone")}</label>
                   <input 
                     required 
                     type="tel" 
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     className="w-full h-12 px-4 rounded-xl border border-gray-300 focus:border-[#1767A6] focus:ring-1 focus:ring-[#1767A6] outline-none transition" 
-                    placeholder="09xxxxxxx" 
+                    placeholder={t("fields.phone_ph")} 
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-700">Ban muốn tham gia (Chọn 1 hoặc nhiều)</label>
+                <label className="text-sm font-semibold text-gray-700">{t("fields.departments")}</label>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-2">
                   {['AI', 'IoT', 'Embedded', 'Robotics', 'UAV', 'Media', 'Sự kiện'].map((ban) => (
                     <label key={ban} className="flex items-center space-x-2 cursor-pointer">
@@ -146,12 +149,12 @@ export default function RecruitmentPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-700">Lý do bạn muốn tham gia CLB?</label>
+                <label className="text-sm font-semibold text-gray-700">{t("fields.reason")}</label>
                 <textarea 
                   value={formData.reason}
                   onChange={(e) => setFormData({...formData, reason: e.target.value})}
                   className="w-full p-4 rounded-xl border border-gray-300 focus:border-[#1767A6] focus:ring-1 focus:ring-[#1767A6] outline-none transition min-h-[120px]" 
-                  placeholder="Hãy chia sẻ mong muốn của bạn..."
+                  placeholder={t("fields.reason_ph")}
                 ></textarea>
               </div>
 
@@ -166,9 +169,9 @@ export default function RecruitmentPage() {
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
-                    Đang gửi...
+                    {t("submitting_btn")}
                   </span>
-                ) : "Gửi Đơn Đăng Ký"}
+                ) : t("submit_btn")}
               </button>
             </form>
           </div>

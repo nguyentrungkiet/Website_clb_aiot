@@ -87,5 +87,154 @@
     "contact": "Contact",
     "address": "ISA Lab, Thu Dau Mot University",
     "rights": "Copyright by AIOT Club."
+  },
+  "ProjectsPage": {
+    "title": "Our Projects",
+    "desc": "Turning ideas into real products. Discover what AIOT Club students are building.",
+    "items": [
+      {
+        "name": "MASS System",
+        "category": "IoT & Cloud",
+        "desc": "Smart water and electricity monitoring platform applied for TDMU classrooms.",
+        "status": "Deployed",
+        "image": "/proj-iot.jpg"
+      },
+      {
+        "name": "Smart Agriculture",
+        "category": "UAV & AI",
+        "desc": "Autonomous drone for monitoring and pesticide spraying using Computer Vision.",
+        "status": "In Development",
+        "image": "/proj-drone.jpg"
+      },
+      {
+        "name": "AutoBot V1",
+        "category": "Robotics",
+        "desc": "Autonomous obstacle avoidance and 3D mapping robot using ROS.",
+        "status": "Completed",
+        "image": "/proj-robot.jpg"
+      },
+      {
+        "name": "Smart Home Kit",
+        "category": "Embedded",
+        "desc": "Affordable smart home practice kit for beginners learning IoT.",
+        "status": "Educational Product",
+        "image": "/proj-iot.jpg"
+      },
+      {
+        "name": "AI Face Attendance",
+        "category": "AI",
+        "desc": "Face recognition attendance system with anti-spoofing integration.",
+        "status": "Completed",
+        "image": "/proj-robot.jpg"
+      },
+      {
+        "name": "Weather Station",
+        "category": "IoT",
+        "desc": "Mini weather station for flood warnings and air quality measurement.",
+        "status": "In Development",
+        "image": "/proj-iot.jpg"
+      }
+    ]
+  },
+  "NewsPage": {
+    "title": "News & Activities",
+    "desc": "Stay updated with the latest activities, workshops, and tech news from AIOT Club.",
+    "read_more": "Read more",
+    "items": [
+      {
+        "date": "Aug 15, 2026",
+        "cat": "Event",
+        "title": "Workshop: ESP32 Programming for Beginners",
+        "desc": "A session sharing fundamental knowledge about the ESP32 microcontroller and basic sensor communication.",
+        "image": "/news-workshop.jpg"
+      },
+      {
+        "date": "Aug 02, 2026",
+        "cat": "Activity",
+        "title": "Networking with Tech Companies in Binh Duong",
+        "desc": "A field trip to smart factories and networking with leading tech engineers.",
+        "image": "/news-workshop.jpg"
+      },
+      {
+        "date": "Jul 20, 2026",
+        "cat": "Achievement",
+        "title": "AIOT Team wins the 2026 Robot Creation Contest",
+        "desc": "The breathtaking journey of the Robotics team overcoming 20 teams to claim the top spot.",
+        "image": "/news-award.jpg"
+      },
+      {
+        "date": "Jul 10, 2026",
+        "cat": "Tech News",
+        "title": "Exploring Generative AI trends in 2026",
+        "desc": "A comprehensive article on AI technologies shaping the future, compiled by the Research team.",
+        "image": "/news-workshop.jpg"
+      }
+    ]
+  },
+  "CompetitionsPage": {
+    "title": "From Lab to Arena",
+    "desc": "\"Every competition is a practical classroom\". Discover AIOT Club's journey to conquer tech awards.",
+    "award_label": "Achievement",
+    "items": [
+      {
+        "year": "2026",
+        "name": "9th National Student Startup",
+        "award": "Second Prize",
+        "icon": "Trophy"
+      },
+      {
+        "year": "2026",
+        "name": "International UAV Contest",
+        "award": "Participating Member",
+        "icon": "Award"
+      },
+      {
+        "year": "2025",
+        "name": "Students with Startup Ideas (TEC2025)",
+        "award": "1 Champion, 2 Second, 1 Third, 1 Potential Prize",
+        "icon": "Trophy"
+      },
+      {
+        "year": "2025",
+        "name": "Startup HUIT",
+        "award": "Consolation Prize",
+        "icon": "Medal"
+      },
+      {
+        "year": "2024",
+        "name": "Students with Startup Ideas (TEC2024)",
+        "award": "Champion",
+        "icon": "Trophy"
+      },
+      {
+        "year": "Recent",
+        "name": "1st National AI Olympic",
+        "award": "Qualifier Team",
+        "icon": "Award"
+      }
+    ]
+  },
+  "RecruitmentPage": {
+    "hero_title": "Join AIOT Club",
+    "hero_desc": "No coding experience required. All you need is a willingness to learn, a bold mindset, and a passion for tech.",
+    "form_title": "Registration Form",
+    "fields": {
+      "name": "Full Name *",
+      "name_ph": "John Doe",
+      "studentId": "Student ID *",
+      "studentId_ph": "Ex: 20241010",
+      "major": "Major *",
+      "major_ph": "IT, SE, AI...",
+      "phone": "Phone Number *",
+      "phone_ph": "09xxxxxxx",
+      "departments": "Departments to join (Select 1 or more)",
+      "reason": "Why do you want to join the club?",
+      "reason_ph": "Share your expectations..."
+    },
+    "submit_btn": "Submit Application",
+    "submitting_btn": "Submitting...",
+    "success_msg": "Application submitted successfully! The executive board will contact you soon.",
+    "error_msg": "An error occurred, please try again.",
+    "network_error": "Cannot connect to the server. Please try again later."
   }
 }

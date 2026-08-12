@@ -87,5 +87,154 @@
     "contact": "Liên hệ",
     "address": "Phòng Lab ISA, ĐH Thủ Dầu Một",
     "rights": "Bản quyền thuộc về CLB AIOT."
+  },
+  "ProjectsPage": {
+    "title": "Dự án của chúng mình",
+    "desc": "Biến ý tưởng thành sản phẩm thực tế. Khám phá những gì sinh viên AIOT Club đã và đang xây dựng.",
+    "items": [
+      {
+        "name": "Hệ thống MASS",
+        "category": "IoT & Cloud",
+        "desc": "Nền tảng giám sát điện nước thông minh áp dụng cho các phòng học tại TDMU.",
+        "status": "Đã triển khai",
+        "image": "/proj-iot.jpg"
+      },
+      {
+        "name": "Nông nghiệp thông minh",
+        "category": "UAV & AI",
+        "desc": "Drone tự hành bay giám sát và phun thuốc sâu bằng công nghệ Computer Vision.",
+        "status": "Đang phát triển",
+        "image": "/proj-drone.jpg"
+      },
+      {
+        "name": "AutoBot V1",
+        "category": "Robotics",
+        "desc": "Robot tự hành tránh vật cản và lập bản đồ không gian 3D dùng ROS.",
+        "status": "Hoàn thành",
+        "image": "/proj-robot.jpg"
+      },
+      {
+        "name": "Smart Home Kit",
+        "category": "Embedded",
+        "desc": "Bộ kit thực hành nhà thông minh giá rẻ dành cho sinh viên mới học IoT.",
+        "status": "Sản phẩm giáo dục",
+        "image": "/proj-iot.jpg"
+      },
+      {
+        "name": "AI Face Attendance",
+        "category": "AI",
+        "desc": "Hệ thống điểm danh bằng nhận diện khuôn mặt có tích hợp chống giả mạo.",
+        "status": "Hoàn thành",
+        "image": "/proj-robot.jpg"
+      },
+      {
+        "name": "Weather Station",
+        "category": "IoT",
+        "desc": "Trạm thời tiết mini cảnh báo ngập lụt, đo chất lượng không khí.",
+        "status": "Đang phát triển",
+        "image": "/proj-iot.jpg"
+      }
+    ]
+  },
+  "NewsPage": {
+    "title": "Tin tức & Hoạt động",
+    "desc": "Cập nhật những hoạt động mới nhất, các buổi workshop và tin tức công nghệ từ AIOT Club.",
+    "read_more": "Đọc tiếp",
+    "items": [
+      {
+        "date": "15 Th08, 2026",
+        "cat": "Sự kiện",
+        "title": "Workshop: Lập trình ESP32 cho người mới bắt đầu",
+        "desc": "Buổi chia sẻ kiến thức nền tảng về vi điều khiển ESP32 và cách giao tiếp với các cảm biến cơ bản.",
+        "image": "/news-workshop.jpg"
+      },
+      {
+        "date": "02 Th08, 2026",
+        "cat": "Hoạt động",
+        "title": "Giao lưu cùng doanh nghiệp công nghệ tại Bình Dương",
+        "desc": "Chuyến tham quan thực tế nhà máy thông minh và giao lưu cùng các kỹ sư công nghệ hàng đầu.",
+        "image": "/news-workshop.jpg"
+      },
+      {
+        "date": "20 Th07, 2026",
+        "cat": "Thành tựu",
+        "title": "Đội tuyển AIOT vô địch cuộc thi Sáng tạo Robot 2026",
+        "desc": "Hành trình nghẹt thở của team Robotics khi vượt qua 20 đội thi để giành ngôi vị cao nhất.",
+        "image": "/news-award.jpg"
+      },
+      {
+        "date": "10 Th07, 2026",
+        "cat": "Tin công nghệ",
+        "title": "Khám phá xu hướng AI tạo sinh trong năm 2026",
+        "desc": "Bài viết tổng hợp những công nghệ AI đang định hình tương lai do team Research biên soạn.",
+        "image": "/news-workshop.jpg"
+      }
+    ]
+  },
+  "CompetitionsPage": {
+    "title": "Từ phòng Lab đến Đấu trường",
+    "desc": "\"Mỗi cuộc thi là một lớp học thực tế\". Khám phá hành trình chinh phục các giải thưởng công nghệ của AIOT Club.",
+    "award_label": "Thành tích",
+    "items": [
+      {
+        "year": "2026",
+        "name": "Khởi nghiệp sinh viên toàn quốc lần thứ IX",
+        "award": "Giải Nhì",
+        "icon": "Trophy"
+      },
+      {
+        "year": "2026",
+        "name": "Cuộc thi Quốc tế UAV Contest",
+        "award": "Thành viên tham gia",
+        "icon": "Award"
+      },
+      {
+        "year": "2025",
+        "name": "Sinh viên với ý tưởng khởi nghiệp (TEC2025)",
+        "award": "1 Quán quân, 2 Giải Nhì, 1 Giải Ba, 1 Tiềm năng",
+        "icon": "Trophy"
+      },
+      {
+        "year": "2025",
+        "name": "Cuộc thi Startup HUIT",
+        "award": "Giải Khuyến khích",
+        "icon": "Medal"
+      },
+      {
+        "year": "2024",
+        "name": "Sinh viên với ý tưởng khởi nghiệp (TEC2024)",
+        "award": "Quán quân",
+        "icon": "Trophy"
+      },
+      {
+        "year": "Mới đây",
+        "name": "Olympic AI Quốc gia lần I",
+        "award": "Đội thi vòng loại",
+        "icon": "Award"
+      }
+    ]
+  },
+  "RecruitmentPage": {
+    "hero_title": "Đăng ký tham gia AIOT Club",
+    "hero_desc": "Không cần kinh nghiệm lập trình. Chỉ cần bạn có tinh thần học hỏi, dám nghĩ dám làm và đam mê công nghệ.",
+    "form_title": "Đơn Đăng Ký",
+    "fields": {
+      "name": "Họ và tên *",
+      "name_ph": "Nguyễn Văn A",
+      "studentId": "Mã số sinh viên *",
+      "studentId_ph": "VD: 20241010",
+      "major": "Ngành học *",
+      "major_ph": "CNTT, KTPM, AI...",
+      "phone": "Số điện thoại *",
+      "phone_ph": "09xxxxxxx",
+      "departments": "Ban muốn tham gia (Chọn 1 hoặc nhiều)",
+      "reason": "Lý do bạn muốn tham gia CLB?",
+      "reason_ph": "Hãy chia sẻ mong muốn của bạn..."
+    },
+    "submit_btn": "Gửi Đơn Đăng Ký",
+    "submitting_btn": "Đang gửi...",
+    "success_msg": "Gửi đơn đăng ký thành công! Ban chủ nhiệm sẽ sớm liên hệ với bạn.",
+    "error_msg": "Có lỗi xảy ra, vui lòng thử lại.",
+    "network_error": "Không thể kết nối đến máy chủ. Vui lòng thử lại sau."
   }
 }
