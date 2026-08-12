@@ -36,7 +36,7 @@ export function Footer() {
             <div className="flex flex-col space-y-2 text-sm text-gray-600">
               <p>{t("address")}</p>
               <p>Email: <a href="mailto:aiotclub.tdmu@gmail.com" className="hover:underline hover:text-blue-600">aiotclub.tdmu@gmail.com</a></p>
-              <p>Fanpage: facebook.com/aiot.tdmu</p>
+              <p>Fanpage: <a href="https://www.facebook.com/aiotclub" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-blue-600">facebook.com/aiotclub</a></p>
             </div>
           </div>
         </div>
