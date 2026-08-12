@@ -1,9 +1,29 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+
+const carouselImages = [
+  "/hero-tech.jpg",
+  "/aiot-lab.jpg",
+  "/proj-iot.jpg",
+  "/proj-drone.jpg",
+  "/proj-robot.jpg"
+];
 
 export function Hero() {
   const t = useTranslations("Hero");
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 4000); // Đổi ảnh mỗi 4 giây
+    
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="relative w-full overflow-hidden bg-[#F5F9FC] py-24 lg:py-32">
@@ -31,19 +51,41 @@ export function Hero() {
             </div>
           </div>
           <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
-            <div className="aspect-square rounded-2xl bg-white p-2 shadow-xl border border-light-border relative overflow-hidden">
-              <div className="relative w-full h-full rounded-xl overflow-hidden">
-                <Image 
-                  src="/hero-tech.jpg" 
-                  alt="AIOT Technology" 
-                  fill 
-                  className="object-cover hover:scale-105 transition-transform duration-700" 
-                  priority
-                />
+            <div className="aspect-square rounded-2xl bg-white p-2 shadow-xl border border-light-border relative overflow-hidden group">
+              <div className="relative w-full h-full rounded-xl overflow-hidden bg-gray-100">
+                {carouselImages.map((src, index) => (
+                  <Image
+                    key={src}
+                    src={src}
+                    alt={`AIOT Activity ${index + 1}`}
+                    fill
+                    className={`object-cover transition-opacity duration-1000 ${
+                      index === currentImageIndex ? "opacity-100" : "opacity-0"
+                    }`}
+                    priority={index === 0}
+                  />
+                ))}
               </div>
+              
+              {/* Pagination Dots */}
+              <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-20">
+                {carouselImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                      index === currentImageIndex 
+                        ? "bg-[#1767A6] w-6" 
+                        : "bg-white/70 hover:bg-white"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+
               {/* Decorative Elements */}
-              <div className="absolute -left-4 top-1/4 h-24 w-24 rounded-full bg-[#1767A6] opacity-20 blur-2xl"></div>
-              <div className="absolute -bottom-4 right-1/4 h-32 w-32 rounded-full bg-[#05A6C8] opacity-20 blur-2xl"></div>
+              <div className="absolute -left-4 top-1/4 h-24 w-24 rounded-full bg-[#1767A6] opacity-20 blur-2xl pointer-events-none"></div>
+              <div className="absolute -bottom-4 right-1/4 h-32 w-32 rounded-full bg-[#05A6C8] opacity-20 blur-2xl pointer-events-none"></div>
             </div>
           </div>
         </div>
