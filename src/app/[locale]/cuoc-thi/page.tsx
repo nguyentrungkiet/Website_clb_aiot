@@ -4,10 +4,12 @@ import { Trophy, Medal, Award } from "lucide-react";
 
 export default function CompetitionsPage() {
   const competitions = [
-    { year: "2025", name: "SV-Startup Toàn quốc", award: "Giải Nhì", project: "Hệ thống Nông nghiệp thông minh bằng UAV", icon: Trophy },
-    { year: "2024", name: "Olympic Tin học Sinh viên", award: "Huy chương Bạc", project: "Khối chuyên Tin", icon: Medal },
-    { year: "2024", name: "Cuộc thi Sáng tạo Robot TDMU", award: "Vô địch", project: "Robot dò đường tự động", icon: Trophy },
-    { year: "2023", name: "Hackathon TDMU Innovation", award: "Giải Ba", project: "Ứng dụng AI phân loại rác", icon: Award },
+    { year: "2026", name: "Khởi nghiệp sinh viên toàn quốc lần thứ IX", award: "Giải Nhì", icon: Trophy },
+    { year: "2026", name: "Cuộc thi Quốc tế UAV Contest", award: "Thành viên tham gia", icon: Award },
+    { year: "2025", name: "Sinh viên với ý tưởng khởi nghiệp", award: "1 Quán quân, 2 Giải Nhì, 1 Giải Ba, 1 Tiềm năng", icon: Trophy },
+    { year: "2025", name: "Cuộc thi Startup HUIT", award: "Giải Khuyến khích", icon: Medal },
+    { year: "2024", name: "Sinh viên với ý tưởng khởi nghiệp", award: "Quán quân", icon: Trophy },
+    { year: "Mới đây", name: "Olympic AI Quốc gia lần I", award: "Đội thi vòng loại", icon: Award },
   ];
 
   return (
@@ -33,7 +35,6 @@ export default function CompetitionsPage() {
                   <div className="bg-white p-6 rounded-2xl shadow-sm border border-light-border hover:shadow-md transition">
                     <span className="text-sm font-bold text-[#05A6C8]">{comp.year}</span>
                     <h3 className="text-xl font-bold text-[#0B2F55] mt-1">{comp.name}</h3>
-                    <p className="text-gray-600 mt-2">Dự án: <span className="font-semibold text-gray-800">{comp.project}</span></p>
                     <div className="mt-4 inline-block bg-[#F5F9FC] text-[#1767A6] px-4 py-1.5 rounded-full font-bold text-sm">
                       Thành tích: {comp.award}
                     </div>
