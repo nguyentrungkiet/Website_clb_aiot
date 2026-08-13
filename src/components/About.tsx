@@ -22,14 +22,19 @@ export function About() {
             </div>
           </div>
           <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
-            <div className="aspect-[4/3] rounded-2xl bg-white p-2 shadow-lg border border-light-border">
+            <div className="aspect-video rounded-2xl bg-white p-2 shadow-lg border border-light-border">
               <div className="relative h-full w-full rounded-xl overflow-hidden">
-                 <Image 
-                   src="/aiot-lab.jpg" 
-                   alt="AIOT Club Lab Students" 
-                   fill 
-                   className="object-cover" 
-                 />
+                 <iframe 
+                   width="100%" 
+                   height="100%" 
+                   src="https://www.youtube.com/embed/FJQxi4UOo30" 
+                   title="Giới thiệu CLB AIOT" 
+                   style={{ border: 0 }}
+                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                   referrerPolicy="strict-origin-when-cross-origin" 
+                   allowFullScreen
+                   className="w-full h-full"
+                 ></iframe>
               </div>
             </div>
           </div>
