@@ -13,7 +13,31 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "AIOT Club - Thu Dau Mot University",
-  description: "Nơi sinh viên cùng học tập, nghiên cứu, phát triển sản phẩm công nghệ thực tế và chinh phục các cuộc thi.",
+  description: "Câu lạc bộ AIOT trực thuộc Viện Công nghệ số – ĐH Thủ Dầu Một. Nơi sinh viên cùng học tập, nghiên cứu, phát triển sản phẩm thực tế về AI, IoT, Robotics và UAV.",
+  keywords: ["AIOT", "AIOT Club", "TDMU", "Đại học Thủ Dầu Một", "Viện Công nghệ số", "AI", "IoT", "Robotics", "UAV", "Sinh viên", "Công nghệ"],
+  authors: [{ name: "AIOT Club TDMU" }],
+  openGraph: {
+    title: "AIOT Club - Thu Dau Mot University",
+    description: "Khám phá Câu lạc bộ Công nghệ hàng đầu tại TDMU. Bắt đầu từ con số 0. Kiến tạo sản phẩm công nghệ thật.",
+    url: "https://www.aiot-tdmu.edu.vn", 
+    siteName: "AIOT Club TDMU",
+    images: [
+      {
+        url: "/aiot-lab.jpg", 
+        width: 1200,
+        height: 630,
+        alt: "AIOT Club TDMU Cover Image",
+      },
+    ],
+    locale: "vi_VN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AIOT Club - Thu Dau Mot University",
+    description: "Bắt đầu từ con số 0. Kiến tạo sản phẩm công nghệ thật.",
+    images: ["/aiot-lab.jpg"],
+  },
 };
 
 export default async function RootLayout(
