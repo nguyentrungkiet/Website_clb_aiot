@@ -27,9 +27,9 @@ export function TechnologyAreas() {
             return (
               <div 
                 key={area.id} 
-                className="group relative flex flex-col items-start gap-4 rounded-2xl border border-border bg-white dark:bg-card p-6 shadow-sm transition-all hover:shadow-md hover:border-[#05A6C8]"
+                className="group relative flex flex-col items-start gap-4 rounded-2xl border border-border bg-white dark:bg-card p-6 shadow-sm transition-all hover:shadow-md hover:border-secondary"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-background text-[#1767A6] group-hover:bg-[#1767A6] group-hover:text-white transition-colors">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-background text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                   <Icon className="h-6 w-6" />
                 </div>
                 <div>

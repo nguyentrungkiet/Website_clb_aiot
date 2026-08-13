@@ -38,14 +38,14 @@ export function Hero() {
                 {t("description")}
               </p>
             </div>
-            <div className="flex items-center gap-4 text-sm font-medium text-[#1767A6]">
+            <div className="flex items-center gap-4 text-sm font-medium text-primary">
               <span>AI</span> &bull; <span>IoT</span> &bull; <span>Embedded</span> &bull; <span>Robotics</span> &bull; <span>UAV</span>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/gioi-thieu" className="inline-flex h-12 items-center justify-center rounded-md bg-[#1767A6] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-navy dark:bg-card">
+              <Link href="/gioi-thieu" className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-white shadow transition-colors hover:bg-navy dark:bg-card">
                 {t("explore")}
               </Link>
-              <Link href="/tuyen-thanh-vien" className="inline-flex h-12 items-center justify-center rounded-md border border-[#1767A6] px-8 text-sm font-medium text-[#1767A6] shadow-sm transition-colors hover:bg-background">
+              <Link href="/tuyen-thanh-vien" className="inline-flex h-12 items-center justify-center rounded-md border border-primary px-8 text-sm font-medium text-primary shadow-sm transition-colors hover:bg-background">
                 {t("join")}
               </Link>
             </div>
@@ -75,7 +75,7 @@ export function Hero() {
                     onClick={() => setCurrentImageIndex(index)}
                     className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                       index === currentImageIndex 
-                        ? "bg-[#1767A6] w-6" 
+                        ? "bg-primary w-6" 
                         : "bg-white/70 hover:bg-white dark:bg-card"
                     }`}
                     aria-label={`Go to slide ${index + 1}`}
@@ -84,8 +84,8 @@ export function Hero() {
               </div>
 
               {/* Decorative Elements */}
-              <div className="absolute -left-4 top-1/4 h-24 w-24 rounded-full bg-[#1767A6] opacity-20 blur-2xl pointer-events-none"></div>
-              <div className="absolute -bottom-4 right-1/4 h-32 w-32 rounded-full bg-[#05A6C8] opacity-20 blur-2xl pointer-events-none"></div>
+              <div className="absolute -left-4 top-1/4 h-24 w-24 rounded-full bg-primary opacity-20 blur-2xl pointer-events-none"></div>
+              <div className="absolute -bottom-4 right-1/4 h-32 w-32 rounded-full bg-secondary opacity-20 blur-2xl pointer-events-none"></div>
             </div>
           </div>
         </div>

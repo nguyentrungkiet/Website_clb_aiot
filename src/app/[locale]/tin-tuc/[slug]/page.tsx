@@ -7,6 +7,20 @@ import { Calendar, ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 
+export async function generateMetadata(props: { params: Promise<{ locale: string; slug: string }> }) {
+  const params = await props.params;
+  const post = getPostBySlug("news", params.locale, params.slug);
+  if (!post) return { title: "Không tìm thấy bài viết" };
+  
+  return {
+    title: `${post.meta.title} | AIOT Club News`,
+    description: post.meta.description,
+    openGraph: {
+      images: [post.meta.image]
+    }
+  };
+}
+
 export default async function NewsDetailPage(
   props: { params: Promise<{ locale: string; slug: string }> }
 ) {
@@ -24,14 +38,14 @@ export default async function NewsDetailPage(
       <Navbar />
       <main className="flex min-h-screen flex-col bg-background">
         <article className="container mx-auto px-4 py-12 md:py-20 max-w-4xl">
-          <Link href="/tin-tuc" className="inline-flex items-center text-[#1767A6] hover:underline mb-8 font-medium">
+          <Link href="/tin-tuc" className="inline-flex items-center text-primary hover:underline mb-8 font-medium">
             <ChevronLeft className="w-4 h-4 mr-1" />
             Quay lại
           </Link>
           
           <header className="mb-10 text-center">
             <div className="flex justify-center items-center gap-4 mb-4">
-              <span className="text-xs font-bold text-white bg-[#05A6C8] px-3 py-1 rounded-full uppercase tracking-wider">
+              <span className="text-xs font-bold text-white bg-secondary px-3 py-1 rounded-full uppercase tracking-wider">
                 {post.meta.category}
               </span>
               <div className="flex items-center text-sm text-gray-500 font-medium">
@@ -55,7 +69,7 @@ export default async function NewsDetailPage(
           </div>
 
           {/* Prose class provided by @tailwindcss/typography */}
-          <div className="prose prose-lg dark:prose-invert prose-headings:text-[#1767A6] max-w-none mx-auto">
+          <div className="prose prose-lg dark:prose-invert prose-headings:text-primary max-w-none mx-auto">
             <MDXRemote source={post.content} />
           </div>
         </article>

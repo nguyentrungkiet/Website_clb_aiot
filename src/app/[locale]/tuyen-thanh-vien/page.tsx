@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export default function RecruitmentPage() {
   const t = useTranslations("RecruitmentPage");
@@ -62,14 +63,17 @@ export default function RecruitmentPage() {
     <>
       <Navbar />
       <main className="flex min-h-screen flex-col bg-white dark:bg-card">
-        <section className="bg-navy dark:bg-card py-20 text-center px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">{t("hero_title")}</h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto relative z-10">
-            {t("hero_desc")}
-          </p>
-        </section>
+        <ScrollReveal direction="none">
+          <section className="bg-navy dark:bg-card py-20 text-center px-4 relative overflow-hidden">
+            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">{t("hero_title")}</h1>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto relative z-10">
+              {t("hero_desc")}
+            </p>
+          </section>
+        </ScrollReveal>
 
+        <ScrollReveal direction="up" delay={0.2}>
         <section className="py-16 container mx-auto px-4 md:px-6 max-w-3xl">
           <div className="bg-white dark:bg-card p-8 md:p-12 rounded-3xl shadow-xl border border-border -mt-24 relative z-20">
             <h2 className="text-2xl font-bold text-foreground mb-8 text-center">{t("form_title")}</h2>
@@ -89,7 +93,7 @@ export default function RecruitmentPage() {
                     type="text" 
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="w-full h-12 px-4 rounded-xl border border-gray-300 focus:border-[#1767A6] focus:ring-1 focus:ring-[#1767A6] outline-none transition" 
+                    className="w-full h-12 px-4 rounded-xl border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition" 
                     placeholder={t("fields.name_ph")} 
                   />
                 </div>
@@ -100,7 +104,7 @@ export default function RecruitmentPage() {
                     type="text" 
                     value={formData.studentId}
                     onChange={(e) => setFormData({...formData, studentId: e.target.value})}
-                    className="w-full h-12 px-4 rounded-xl border border-gray-300 focus:border-[#1767A6] focus:ring-1 focus:ring-[#1767A6] outline-none transition" 
+                    className="w-full h-12 px-4 rounded-xl border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition" 
                     placeholder={t("fields.studentId_ph")} 
                   />
                 </div>
@@ -114,7 +118,7 @@ export default function RecruitmentPage() {
                     type="text" 
                     value={formData.major}
                     onChange={(e) => setFormData({...formData, major: e.target.value})}
-                    className="w-full h-12 px-4 rounded-xl border border-gray-300 focus:border-[#1767A6] focus:ring-1 focus:ring-[#1767A6] outline-none transition" 
+                    className="w-full h-12 px-4 rounded-xl border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition" 
                     placeholder={t("fields.major_ph")} 
                   />
                 </div>
@@ -125,7 +129,7 @@ export default function RecruitmentPage() {
                     type="tel" 
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    className="w-full h-12 px-4 rounded-xl border border-gray-300 focus:border-[#1767A6] focus:ring-1 focus:ring-[#1767A6] outline-none transition" 
+                    className="w-full h-12 px-4 rounded-xl border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition" 
                     placeholder={t("fields.phone_ph")} 
                   />
                 </div>
@@ -140,7 +144,7 @@ export default function RecruitmentPage() {
                         type="checkbox" 
                         checked={formData.departments.includes(ban)}
                         onChange={() => handleCheckboxChange(ban)}
-                        className="w-4 h-4 text-[#1767A6] rounded focus:ring-[#1767A6]" 
+                        className="w-4 h-4 text-primary rounded focus:ring-primary" 
                       />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{ban}</span>
                     </label>
@@ -153,7 +157,7 @@ export default function RecruitmentPage() {
                 <textarea 
                   value={formData.reason}
                   onChange={(e) => setFormData({...formData, reason: e.target.value})}
-                  className="w-full p-4 rounded-xl border border-gray-300 focus:border-[#1767A6] focus:ring-1 focus:ring-[#1767A6] outline-none transition min-h-[120px]" 
+                  className="w-full p-4 rounded-xl border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition min-h-[120px]" 
                   placeholder={t("fields.reason_ph")}
                 ></textarea>
               </div>
@@ -161,7 +165,7 @@ export default function RecruitmentPage() {
               <button 
                 type="submit" 
                 disabled={isLoading}
-                className="w-full h-14 flex items-center justify-center bg-gradient-to-r from-[#05A6C8] to-[#1767A6] text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1 disabled:opacity-70 disabled:hover:translate-y-0"
+                className="w-full h-14 flex items-center justify-center bg-gradient-to-r from-secondary to-primary text-white font-bold rounded-xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1 disabled:opacity-70 disabled:hover:translate-y-0"
               >
                 {isLoading ? (
                   <span className="inline-flex items-center">
@@ -176,6 +180,7 @@ export default function RecruitmentPage() {
             </form>
           </div>
         </section>
+        </ScrollReveal>
       </main>
       <Footer />
     </>

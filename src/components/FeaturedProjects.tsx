@@ -19,7 +19,7 @@ export function FeaturedProjects() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {t("title")}
           </h2>
-          <Link href="/du-an" className="inline-flex items-center text-[#1767A6] hover:text-[#05A6C8] font-medium group">
+          <Link href="/du-an" className="inline-flex items-center text-primary hover:text-secondary font-medium group">
             {t("view_all")}
             <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
@@ -37,7 +37,7 @@ export function FeaturedProjects() {
                 />
               </div>
               <div className="p-6">
-                <div className="mb-2 text-xs font-semibold text-[#05A6C8]">
+                <div className="mb-2 text-xs font-semibold text-secondary">
                   {t(`items.${id}.tags` as any)}
                 </div>
                 <h3 className="mb-2 text-xl font-bold text-foreground">

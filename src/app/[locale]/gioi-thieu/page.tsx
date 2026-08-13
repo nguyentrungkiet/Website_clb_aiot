@@ -32,17 +32,17 @@ export default function AboutPage() {
           <section className="py-16 container mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="p-6 border border-border rounded-xl text-center hover:shadow-md transition">
-                <Target className="w-12 h-12 text-[#1767A6] mx-auto mb-4" />
+                <Target className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-foreground mb-2">Tầm Nhìn</h3>
                 <p className="text-gray-600 dark:text-gray-300">Trở thành một trong những CLB công nghệ sinh viên hàng đầu miền Nam, là vườn ươm cho các startup và dự án thực tế.</p>
               </div>
               <div className="p-6 border border-border rounded-xl text-center hover:shadow-md transition">
-                <BookOpen className="w-12 h-12 text-[#1767A6] mx-auto mb-4" />
+                <BookOpen className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-foreground mb-2">Sứ Mệnh</h3>
                 <p className="text-gray-600 dark:text-gray-300">Tạo ra môi trường "Học thật - Làm thật", giúp sinh viên ứng dụng kiến thức vào thực tế ngay từ năm nhất.</p>
               </div>
               <div className="p-6 border border-border rounded-xl text-center hover:shadow-md transition">
-                <Users className="w-12 h-12 text-[#1767A6] mx-auto mb-4" />
+                <Users className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-foreground mb-2">Văn Hóa</h3>
                 <p className="text-gray-600 dark:text-gray-300">Chia sẻ kiến thức, không sợ sai, sẵn sàng thử thách. Bạn không cần giỏi trước khi bắt đầu.</p>
               </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
                       <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                     </div>
                     <h4 className="text-lg font-bold text-foreground">{member.name}</h4>
-                    <p className="text-sm text-[#1767A6] font-medium">{member.role}</p>
+                    <p className="text-sm text-primary font-medium">{member.role}</p>
                   </div>
                 ))}
               </div>

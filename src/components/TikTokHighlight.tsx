@@ -52,8 +52,8 @@ export function TikTokHighlight() {
             </div>
             
             {/* Floating decoration dots */}
-            <div className="absolute -right-6 top-1/4 h-12 w-12 rounded-full bg-[#05A6C8]/10 blur-md"></div>
-            <div className="absolute -left-8 bottom-1/4 h-16 w-16 rounded-full bg-[#1767A6]/10 blur-md"></div>
+            <div className="absolute -right-6 top-1/4 h-12 w-12 rounded-full bg-secondary/10 blur-md"></div>
+            <div className="absolute -left-8 bottom-1/4 h-16 w-16 rounded-full bg-primary/10 blur-md"></div>
           </div>
           
         </div>

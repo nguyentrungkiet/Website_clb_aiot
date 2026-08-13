@@ -7,6 +7,20 @@ import { Calendar, ChevronLeft, Tag } from "lucide-react";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 
+export async function generateMetadata(props: { params: Promise<{ locale: string; slug: string }> }) {
+  const params = await props.params;
+  const post = getPostBySlug("projects", params.locale, params.slug);
+  if (!post) return { title: "Không tìm thấy dự án" };
+  
+  return {
+    title: `${post.meta.title} | AIOT Club Projects`,
+    description: post.meta.description,
+    openGraph: {
+      images: [post.meta.image]
+    }
+  };
+}
+
 export default async function ProjectDetailPage(
   props: { params: Promise<{ locale: string; slug: string }> }
 ) {
@@ -24,18 +38,18 @@ export default async function ProjectDetailPage(
       <Navbar />
       <main className="flex min-h-screen flex-col bg-background">
         <article className="container mx-auto px-4 py-12 md:py-20 max-w-4xl">
-          <Link href="/du-an" className="inline-flex items-center text-[#1767A6] hover:underline mb-8 font-medium">
+          <Link href="/du-an" className="inline-flex items-center text-primary hover:underline mb-8 font-medium">
             <ChevronLeft className="w-4 h-4 mr-1" />
             Quay lại Dự án
           </Link>
           
           <header className="mb-10 text-center">
             <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
-              <span className="text-xs font-bold text-white bg-[#05A6C8] px-3 py-1 rounded-full uppercase tracking-wider">
+              <span className="text-xs font-bold text-white bg-secondary px-3 py-1 rounded-full uppercase tracking-wider">
                 {post.meta.category}
               </span>
               {post.meta.status && (
-                <span className="inline-flex items-center px-3 py-1 bg-muted text-[#1767A6] text-xs font-semibold rounded-full">
+                <span className="inline-flex items-center px-3 py-1 bg-muted text-primary text-xs font-semibold rounded-full">
                   <Tag className="w-3 h-3 mr-1" />
                   {post.meta.status}
                 </span>
@@ -61,7 +75,7 @@ export default async function ProjectDetailPage(
           </div>
 
           {/* Prose class provided by @tailwindcss/typography */}
-          <div className="prose prose-lg dark:prose-invert prose-headings:text-[#1767A6] max-w-none mx-auto">
+          <div className="prose prose-lg dark:prose-invert prose-headings:text-primary max-w-none mx-auto">
             <MDXRemote source={post.content} />
           </div>
         </article>

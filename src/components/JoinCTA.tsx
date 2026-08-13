@@ -9,8 +9,8 @@ export function JoinCTA() {
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
       
       {/* Decorative gradient circles */}
-      <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-[#1767A6] opacity-30 blur-3xl"></div>
-      <div className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-[#05A6C8] opacity-20 blur-3xl"></div>
+      <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-primary opacity-30 blur-3xl"></div>
+      <div className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-secondary opacity-20 blur-3xl"></div>
       
       <div className="container relative z-10 mx-auto px-4 text-center md:px-6">
         <div className="mx-auto max-w-2xl space-y-8">
@@ -23,7 +23,7 @@ export function JoinCTA() {
           <div className="pt-4">
             <Link 
               href="/tuyen-thanh-vien" 
-              className="inline-flex h-14 items-center justify-center rounded-full bg-gradient-to-r from-[#05A6C8] to-[#1767A6] px-10 text-base font-bold text-white shadow-lg transition-transform hover:scale-105"
+              className="inline-flex h-14 items-center justify-center rounded-full bg-gradient-to-r from-secondary to-primary px-10 text-base font-bold text-white shadow-lg transition-transform hover:scale-105"
             >
               {t("button")}
             </Link>

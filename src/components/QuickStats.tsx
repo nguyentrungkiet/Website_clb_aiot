@@ -19,7 +19,7 @@ export function QuickStats() {
             const Icon = stat.icon;
             return (
               <div key={index} className="flex flex-col items-center justify-center space-y-2">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-background text-[#05A6C8]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-background text-secondary">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="text-3xl font-bold text-foreground">{stat.value}</h3>

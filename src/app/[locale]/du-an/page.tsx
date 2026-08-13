@@ -40,12 +40,12 @@ export default async function ProjectsPage(props: { params: Promise<{ locale: st
                     />
                   </div>
                   <div className="p-6 flex-grow flex flex-col">
-                    <span className="text-xs font-bold text-[#05A6C8] uppercase tracking-wider">{project.category}</span>
+                    <span className="text-xs font-bold text-secondary uppercase tracking-wider">{project.category}</span>
                     <h3 className="text-xl font-bold text-foreground mt-2 mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
                     <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">{project.description}</p>
                     {project.status && (
                       <div className="mt-auto">
-                        <div className="inline-block px-3 py-1 bg-background text-[#1767A6] text-xs font-semibold rounded-full">
+                        <div className="inline-block px-3 py-1 bg-background text-primary text-xs font-semibold rounded-full">
                           {project.status}
                         </div>
                       </div>

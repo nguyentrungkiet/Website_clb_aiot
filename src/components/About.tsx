@@ -15,8 +15,8 @@ export function About() {
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               {t("description")}
             </p>
-            <div className="rounded-xl border-l-4 border-[#05A6C8] bg-white dark:bg-card p-6 shadow-sm">
-              <p className="text-xl font-medium italic text-[#1767A6]">
+            <div className="rounded-xl border-l-4 border-secondary bg-white dark:bg-card p-6 shadow-sm">
+              <p className="text-xl font-medium italic text-primary">
                 "{t("quote")}"
               </p>
             </div>

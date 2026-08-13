@@ -25,10 +25,10 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-bold text-foreground">{t("quick_links")}</h4>
             <nav className="flex flex-col space-y-2 text-sm text-gray-600 dark:text-gray-300">
-              <Link href="/gioi-thieu" className="hover:text-[#1767A6]">Về chúng mình</Link>
-              <Link href="/du-an" className="hover:text-[#1767A6]">Dự án</Link>
-              <Link href="/cuoc-thi" className="hover:text-[#1767A6]">Cuộc thi</Link>
-              <Link href="/tin-tuc" className="hover:text-[#1767A6]">Tin tức & Hoạt động</Link>
+              <Link href="/gioi-thieu" className="hover:text-primary">Về chúng mình</Link>
+              <Link href="/du-an" className="hover:text-primary">Dự án</Link>
+              <Link href="/cuoc-thi" className="hover:text-primary">Cuộc thi</Link>
+              <Link href="/tin-tuc" className="hover:text-primary">Tin tức & Hoạt động</Link>
             </nav>
           </div>
           <div className="space-y-4">
