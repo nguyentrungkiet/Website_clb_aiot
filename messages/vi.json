@@ -236,5 +236,8 @@
     "success_msg": "Gửi đơn đăng ký thành công! Ban chủ nhiệm sẽ sớm liên hệ với bạn.",
     "error_msg": "Có lỗi xảy ra, vui lòng thử lại.",
     "network_error": "Không thể kết nối đến máy chủ. Vui lòng thử lại sau."
+  },
+  "Location": {
+    "title": "Bản đồ vị trí"
   }
 }

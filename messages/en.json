@@ -236,5 +236,8 @@
     "success_msg": "Application submitted successfully! The executive board will contact you soon.",
     "error_msg": "An error occurred, please try again.",
     "network_error": "Cannot connect to the server. Please try again later."
+  },
+  "Location": {
+    "title": "Lab Location"
   }
 }

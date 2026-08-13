@@ -5,6 +5,7 @@ import { About } from "@/components/About";
 import { TechnologyAreas } from "@/components/TechnologyAreas";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { JoinCTA } from "@/components/JoinCTA";
+import { LocationMap } from "@/components/LocationMap";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <TechnologyAreas />
         <FeaturedProjects />
         <JoinCTA />
+        <LocationMap />
       </main>
       <Footer />
     </>
