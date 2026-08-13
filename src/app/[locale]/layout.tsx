@@ -40,6 +40,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { ThemeProvider } from "@/components/ThemeProvider";
+
 export default async function RootLayout(
   props: {
     children: React.ReactNode;
@@ -57,10 +59,17 @@ export default async function RootLayout(
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${inter.variable} font-sans antialiased`}>
-      <body className="min-h-screen flex flex-col bg-[#F5F9FC] text-[#0B2F55]">
+    <html lang={locale} className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-300">
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

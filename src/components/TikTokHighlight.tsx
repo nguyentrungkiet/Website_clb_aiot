@@ -4,16 +4,16 @@ export function TikTokHighlight() {
   const t = useTranslations("TikTok");
 
   return (
-    <section className="w-full overflow-hidden bg-white py-16 lg:py-24">
+    <section className="w-full overflow-hidden bg-white dark:bg-card py-16 lg:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           
           {/* Text Content (Left side on desktop) */}
           <div className="flex flex-col justify-center space-y-6 lg:pl-10 text-center lg:text-left order-2 lg:order-1">
-            <h2 className="text-3xl font-bold tracking-tight text-[#0B2F55] sm:text-4xl lg:text-5xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               {t("title")}
             </h2>
-            <p className="max-w-[500px] mx-auto lg:mx-0 text-lg text-gray-600 leading-relaxed">
+            <p className="max-w-[500px] mx-auto lg:mx-0 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               {t("desc")}
             </p>
             <div className="pt-4 flex justify-center lg:justify-start">

@@ -61,8 +61,8 @@ export default function RecruitmentPage() {
   return (
     <>
       <Navbar />
-      <main className="flex min-h-screen flex-col bg-white">
-        <section className="bg-[#0B2F55] py-20 text-center px-4 relative overflow-hidden">
+      <main className="flex min-h-screen flex-col bg-white dark:bg-card">
+        <section className="bg-navy dark:bg-card py-20 text-center px-4 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">{t("hero_title")}</h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto relative z-10">
@@ -71,8 +71,8 @@ export default function RecruitmentPage() {
         </section>
 
         <section className="py-16 container mx-auto px-4 md:px-6 max-w-3xl">
-          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-light-border -mt-24 relative z-20">
-            <h2 className="text-2xl font-bold text-[#0B2F55] mb-8 text-center">{t("form_title")}</h2>
+          <div className="bg-white dark:bg-card p-8 md:p-12 rounded-3xl shadow-xl border border-border -mt-24 relative z-20">
+            <h2 className="text-2xl font-bold text-foreground mb-8 text-center">{t("form_title")}</h2>
             
             {statusMessage.message && (
               <div className={`mb-6 p-4 rounded-xl text-center font-medium ${statusMessage.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
@@ -83,7 +83,7 @@ export default function RecruitmentPage() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700">{t("fields.name")}</label>
+                  <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{t("fields.name")}</label>
                   <input 
                     required 
                     type="text" 
@@ -94,7 +94,7 @@ export default function RecruitmentPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700">{t("fields.studentId")}</label>
+                  <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{t("fields.studentId")}</label>
                   <input 
                     required 
                     type="text" 
@@ -108,7 +108,7 @@ export default function RecruitmentPage() {
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700">{t("fields.major")}</label>
+                  <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{t("fields.major")}</label>
                   <input 
                     required 
                     type="text" 
@@ -119,7 +119,7 @@ export default function RecruitmentPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700">{t("fields.phone")}</label>
+                  <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{t("fields.phone")}</label>
                   <input 
                     required 
                     type="tel" 
@@ -132,7 +132,7 @@ export default function RecruitmentPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-700">{t("fields.departments")}</label>
+                <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{t("fields.departments")}</label>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-2">
                   {['AI', 'IoT', 'Embedded', 'Robotics', 'UAV', 'Media', 'Sự kiện'].map((ban) => (
                     <label key={ban} className="flex items-center space-x-2 cursor-pointer">
@@ -142,14 +142,14 @@ export default function RecruitmentPage() {
                         onChange={() => handleCheckboxChange(ban)}
                         className="w-4 h-4 text-[#1767A6] rounded focus:ring-[#1767A6]" 
                       />
-                      <span className="text-sm text-gray-600">{ban}</span>
+                      <span className="text-sm text-gray-600 dark:text-gray-300">{ban}</span>
                     </label>
                   ))}
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-700">{t("fields.reason")}</label>
+                <label className="text-sm font-semibold text-gray-700 dark:text-gray-300">{t("fields.reason")}</label>
                 <textarea 
                   value={formData.reason}
                   onChange={(e) => setFormData({...formData, reason: e.target.value})}

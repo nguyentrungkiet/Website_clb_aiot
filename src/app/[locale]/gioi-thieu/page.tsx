@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Target, Users, BookOpen } from "lucide-react";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export default function AboutPage() {
   const members = [
@@ -17,50 +18,56 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <main className="flex min-h-screen flex-col bg-white">
-        <section className="bg-[#F5F9FC] py-20 text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#0B2F55] mb-6">Về Chúng Mình</h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            AIOT Club là câu lạc bộ trực thuộc Viện Công nghệ số - Trường Đại học Thủ Dầu Một. Nơi hội tụ những sinh viên có niềm đam mê mãnh liệt với Công nghệ, AI, IoT, và Robotics.
-          </p>
-        </section>
+      <main className="flex min-h-screen flex-col bg-white dark:bg-card">
+        <ScrollReveal direction="none">
+          <section className="bg-background py-20 text-center px-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Về Chúng Mình</h1>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              AIOT Club là câu lạc bộ trực thuộc Viện Công nghệ số - Trường Đại học Thủ Dầu Một. Nơi hội tụ những sinh viên có niềm đam mê mãnh liệt với Công nghệ, AI, IoT, và Robotics.
+            </p>
+          </section>
+        </ScrollReveal>
 
-        <section className="py-16 container mx-auto px-4 md:px-6">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 border border-light-border rounded-xl text-center hover:shadow-md transition">
-              <Target className="w-12 h-12 text-[#1767A6] mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-[#0B2F55] mb-2">Tầm Nhìn</h3>
-              <p className="text-gray-600">Trở thành một trong những CLB công nghệ sinh viên hàng đầu miền Nam, là vườn ươm cho các startup và dự án thực tế.</p>
+        <ScrollReveal direction="up" delay={0.2}>
+          <section className="py-16 container mx-auto px-4 md:px-6">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="p-6 border border-border rounded-xl text-center hover:shadow-md transition">
+                <Target className="w-12 h-12 text-[#1767A6] mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-foreground mb-2">Tầm Nhìn</h3>
+                <p className="text-gray-600 dark:text-gray-300">Trở thành một trong những CLB công nghệ sinh viên hàng đầu miền Nam, là vườn ươm cho các startup và dự án thực tế.</p>
+              </div>
+              <div className="p-6 border border-border rounded-xl text-center hover:shadow-md transition">
+                <BookOpen className="w-12 h-12 text-[#1767A6] mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-foreground mb-2">Sứ Mệnh</h3>
+                <p className="text-gray-600 dark:text-gray-300">Tạo ra môi trường "Học thật - Làm thật", giúp sinh viên ứng dụng kiến thức vào thực tế ngay từ năm nhất.</p>
+              </div>
+              <div className="p-6 border border-border rounded-xl text-center hover:shadow-md transition">
+                <Users className="w-12 h-12 text-[#1767A6] mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-foreground mb-2">Văn Hóa</h3>
+                <p className="text-gray-600 dark:text-gray-300">Chia sẻ kiến thức, không sợ sai, sẵn sàng thử thách. Bạn không cần giỏi trước khi bắt đầu.</p>
+              </div>
             </div>
-            <div className="p-6 border border-light-border rounded-xl text-center hover:shadow-md transition">
-              <BookOpen className="w-12 h-12 text-[#1767A6] mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-[#0B2F55] mb-2">Sứ Mệnh</h3>
-              <p className="text-gray-600">Tạo ra môi trường "Học thật - Làm thật", giúp sinh viên ứng dụng kiến thức vào thực tế ngay từ năm nhất.</p>
-            </div>
-            <div className="p-6 border border-light-border rounded-xl text-center hover:shadow-md transition">
-              <Users className="w-12 h-12 text-[#1767A6] mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-[#0B2F55] mb-2">Văn Hóa</h3>
-              <p className="text-gray-600">Chia sẻ kiến thức, không sợ sai, sẵn sàng thử thách. Bạn không cần giỏi trước khi bắt đầu.</p>
-            </div>
-          </div>
-        </section>
+          </section>
+        </ScrollReveal>
 
-        <section className="bg-[#F5F9FC] py-16">
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold text-[#0B2F55] mb-12">Ban Điều Hành</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {members.map((member, idx) => (
-                <div key={idx} className="flex flex-col items-center">
-                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-4 border-4 border-white shadow-lg">
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+        <ScrollReveal direction="up" delay={0.2}>
+          <section className="bg-background py-16">
+            <div className="container mx-auto px-4 md:px-6 text-center">
+              <h2 className="text-3xl font-bold text-foreground mb-12">Ban Điều Hành</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {members.map((member, idx) => (
+                  <div key={idx} className="flex flex-col items-center">
+                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-4 border-4 border-border shadow-lg">
+                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                    </div>
+                    <h4 className="text-lg font-bold text-foreground">{member.name}</h4>
+                    <p className="text-sm text-[#1767A6] font-medium">{member.role}</p>
                   </div>
-                  <h4 className="text-lg font-bold text-[#0B2F55]">{member.name}</h4>
-                  <p className="text-sm text-[#1767A6] font-medium">{member.role}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </ScrollReveal>
       </main>
       <Footer />
     </>

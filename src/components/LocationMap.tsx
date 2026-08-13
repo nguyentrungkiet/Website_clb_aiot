@@ -4,9 +4,9 @@ export function LocationMap() {
   const t = useTranslations("Location");
 
   return (
-    <section className="w-full bg-white py-16">
+    <section className="w-full bg-white dark:bg-card py-16">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="mb-8 text-center text-3xl font-bold text-[#0B2F55] md:text-4xl">
+        <h2 className="mb-8 text-center text-3xl font-bold text-foreground md:text-4xl">
           {t("title")}
         </h2>
         <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl shadow-lg border border-gray-100">

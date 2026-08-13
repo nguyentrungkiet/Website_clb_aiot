@@ -5,7 +5,7 @@ export function JoinCTA() {
   const t = useTranslations("CTA");
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#0B2F55] py-20 lg:py-32">
+    <section className="relative w-full overflow-hidden bg-navy dark:bg-card py-20 lg:py-32">
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
       
       {/* Decorative gradient circles */}

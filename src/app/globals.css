@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
 @theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  
   --color-primary: #1767A6;
   --color-secondary: #05A6C8;
   --color-navy: #0B2F55;
@@ -9,23 +15,31 @@
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Light Mode Variables */
 :root {
   --background: #F5F9FC;
   --foreground: #0B2F55;
+  --card: #ffffff;
+  --border: #DCEAF3;
+  --muted: #f1f5f9;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* For now, keep dark mode colors similar or slightly adapted if needed */
-    --background: #0B2F55;
-    --foreground: #F5F9FC;
-  }
+/* Dark Mode Variables (added by next-themes class="dark") */
+.dark {
+  --background: #020817; /* Very deep blue/black */
+  --foreground: #f8fafc; /* Slate 50 */
+  --card: #0f172a;       /* Slate 900 */
+  --border: #1e293b;     /* Slate 800 */
+  --muted: #1e293b;      /* Slate 800 */
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  transition-property: color, background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
 /* Subtle tech patterns and utility classes */
@@ -34,6 +48,11 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid var(--color-light-border);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid var(--border);
 }
 
 .text-gradient {

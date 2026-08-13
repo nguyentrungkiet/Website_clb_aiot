@@ -13,10 +13,10 @@ export function FeaturedProjects() {
   ];
 
   return (
-    <section className="w-full bg-[#F5F9FC] py-20 lg:py-32">
+    <section className="w-full bg-background py-20 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <h2 className="text-3xl font-bold tracking-tight text-[#0B2F55] sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {t("title")}
           </h2>
           <Link href="/du-an" className="inline-flex items-center text-[#1767A6] hover:text-[#05A6C8] font-medium group">
@@ -27,7 +27,7 @@ export function FeaturedProjects() {
         
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map(({ id, image }) => (
-            <div key={id} className="group overflow-hidden rounded-2xl bg-white shadow-sm border border-light-border transition-all hover:shadow-md">
+            <div key={id} className="group overflow-hidden rounded-2xl bg-white dark:bg-card shadow-sm border border-border transition-all hover:shadow-md">
               <div className="aspect-[16/9] w-full bg-gray-200 relative overflow-hidden">
                 <Image 
                   src={image} 
@@ -40,10 +40,10 @@ export function FeaturedProjects() {
                 <div className="mb-2 text-xs font-semibold text-[#05A6C8]">
                   {t(`items.${id}.tags` as any)}
                 </div>
-                <h3 className="mb-2 text-xl font-bold text-[#0B2F55]">
+                <h3 className="mb-2 text-xl font-bold text-foreground">
                   {t(`items.${id}.title` as any)}
                 </h3>
-                <p className="text-gray-600 line-clamp-2">
+                <p className="text-gray-600 dark:text-gray-300 line-clamp-2">
                   {t(`items.${id}.desc` as any)}
                 </p>
               </div>
