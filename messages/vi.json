@@ -241,6 +241,8 @@
     "title": "Bản đồ vị trí"
   },
   "TikTok": {
-    "title": "Theo dõi trên TikTok"
+    "title": "Theo dõi trên TikTok",
+    "desc": "Cùng khám phá những khoảnh khắc hậu trường thú vị, các dự án công nghệ sáng tạo và nhịp sống sinh viên đầy màu sắc tại AIOT Club!",
+    "button": "Follow @aiotclub"
   }
 }

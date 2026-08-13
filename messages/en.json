@@ -241,6 +241,8 @@
     "title": "Lab Location"
   },
   "TikTok": {
-    "title": "Follow us on TikTok"
+    "title": "Follow us on TikTok",
+    "desc": "Discover fun behind-the-scenes moments, creative tech projects, and the vibrant student life at AIOT Club!",
+    "button": "Follow @aiotclub"
   }
 }
