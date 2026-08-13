@@ -11,7 +11,7 @@ export function LocationMap() {
         </h2>
         <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl shadow-lg border border-gray-100">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.745167015509!2d106.66611361111956!3d10.982559555319808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d112d8a59913%3A0xc34b07106cf2c2f7!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBUaOG7pyBE4bqndSBN4buZdA!5e0!3m2!1svi!2s!4v1710000000000!5m2!1svi!2s" 
+            src="https://maps.google.com/maps?q=Vi%E1%BB%87n%20C%C3%B4ng%20ngh%E1%BB%87%20s%E1%BB%91%20Tr%C6%B0%E1%BB%9Dng%20%C4%90%E1%BA%A1i%20h%E1%BB%8Dc%20Th%E1%BB%A7%20D%E1%BA%A7u%20M%E1%BB%99t&t=&z=17&ie=UTF8&iwloc=&output=embed"
             width="100%" 
             height="450" 
             style={{ border: 0 }} 
