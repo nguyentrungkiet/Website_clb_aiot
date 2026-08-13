@@ -1,0 +1,24 @@
+---
+title: "Robot AGV Tự hành trong Kho vận"
+date: "2026-06-15"
+image: "/proj-robot.jpg"
+category: "Robotics"
+status: "Đang phát triển"
+description: "Hệ thống Robot tự hành dẫn hướng bằng vạch màu và RFID, ứng dụng trong việc vận chuyển hàng hóa thông minh."
+---
+
+# Robot AGV Tự hành trong Kho vận
+
+Dự án **Robot AGV (Automated Guided Vehicle)** là một trong những dự án trọng điểm của Ban Robotics thuộc AIOT Club trong năm học 2025-2026.
+
+## Tổng quan Dự án
+Mục tiêu của dự án là chế tạo một nguyên mẫu Robot có khả năng tự động di chuyển theo các tuyến đường được định sẵn (vạch màu) và nhận diện các trạm dừng (thông qua thẻ RFID) để giao/nhận hàng hóa trong không gian nhà kho.
+
+## Các công nghệ áp dụng
+- **Vi điều khiển:** ESP32 và Arduino Mega.
+- **Cảm biến:** Cảm biến dò đường (Line Tracking) hồng ngoại 5 kênh, module đọc RFID RC522, cảm biến siêu âm tránh vật cản.
+- **Giao tiếp:** MQTT / WebSockets để kết nối Robot với hệ thống Giám sát trung tâm (Web Dashboard).
+- **Phần mềm:** C/C++ cho nhúng, React.js cho Web Dashboard.
+
+## Tình trạng hiện tại
+Đội ngũ phát triển đã hoàn thiện phần cứng (khung gầm, động cơ, mạch điều khiển) và đang trong giai đoạn tối ưu thuật toán PID để Robot bám dải đường chạy mượt mà nhất. Bước tiếp theo sẽ là tích hợp camera xử lý ảnh bằng Raspberry Pi.

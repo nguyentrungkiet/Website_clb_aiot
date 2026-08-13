@@ -11,6 +11,7 @@ export interface PostMeta {
   image: string;
   category: string;
   description: string;
+  status?: string;
 }
 
 export interface Post {
@@ -46,6 +47,7 @@ export function getAllPosts(type: 'news' | 'projects', locale: string): PostMeta
         image: data.image || '/logo.png',
         category: data.category || '',
         description: data.description || '',
+        status: data.status || '',
       };
     });
 
@@ -79,6 +81,7 @@ export function getPostBySlug(type: 'news' | 'projects', locale: string, slug: s
       image: data.image || '/logo.png',
       category: data.category || '',
       description: data.description || '',
+      status: data.status || '',
     },
     content,
   };

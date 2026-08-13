@@ -1,0 +1,24 @@
+---
+title: "Autonomous AGV Robot in Warehousing"
+date: "2026-06-15"
+image: "/proj-robot.jpg"
+category: "Robotics"
+status: "In Development"
+description: "An autonomous robot system guided by colored lines and RFID, applied in smart goods transportation."
+---
+
+# Autonomous AGV Robot in Warehousing
+
+The **AGV (Automated Guided Vehicle) Robot** is one of the key projects of the Robotics Department under the AIOT Club for the 2025-2026 academic year.
+
+## Project Overview
+The project's goal is to build a prototype Robot capable of automatically moving along predefined routes (colored lines) and recognizing stopping stations (via RFID tags) to deliver/receive goods in a warehouse space.
+
+## Applied Technologies
+- **Microcontrollers:** ESP32 and Arduino Mega.
+- **Sensors:** 5-channel Infrared Line Tracking sensor, RC522 RFID reader module, Ultrasonic sensor for obstacle avoidance.
+- **Communication:** MQTT / WebSockets to connect the Robot with the Central Monitoring System (Web Dashboard).
+- **Software:** C/C++ for embedded, React.js for Web Dashboard.
+
+## Current Status
+The development team has completed the hardware (chassis, motors, control circuit) and is in the phase of optimizing the PID algorithm for the Robot to follow the line as smoothly as possible. The next step will be to integrate a camera for image processing using a Raspberry Pi.
