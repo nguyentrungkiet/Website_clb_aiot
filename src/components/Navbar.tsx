@@ -39,6 +39,7 @@ export function Navbar() {
           <Link href="/du-an" className="hover:text-primary transition-colors">{t("projects")}</Link>
           <Link href="/cuoc-thi" className="hover:text-primary transition-colors">{t("competitions")}</Link>
           <Link href="/tin-tuc" className="hover:text-primary transition-colors">{t("news")}</Link>
+          <Link href="/lab" className="hover:text-primary transition-colors font-semibold">ISA Lab</Link>
         </nav>
         
         <div className="flex items-center gap-4">
@@ -74,6 +75,7 @@ export function Navbar() {
           <Link href="/du-an" onClick={closeMenu} className="font-medium text-foreground hover:text-primary">{t("projects")}</Link>
           <Link href="/cuoc-thi" onClick={closeMenu} className="font-medium text-foreground hover:text-primary">{t("competitions")}</Link>
           <Link href="/tin-tuc" onClick={closeMenu} className="font-medium text-foreground hover:text-primary">{t("news")}</Link>
+          <Link href="/lab" onClick={closeMenu} className="font-medium text-foreground hover:text-primary font-semibold">ISA Lab</Link>
           <div className="pt-2 border-t border-border">
             <Link href="/tuyen-thanh-vien" onClick={closeMenu} className="flex h-10 w-full items-center justify-center rounded-md bg-gradient-to-r from-primary to-secondary px-4 text-sm font-medium text-white shadow">
               {t("join")}
