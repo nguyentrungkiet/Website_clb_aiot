@@ -207,6 +207,12 @@ function doPost(e) {
     const data = JSON.parse(e.postData.contents);
     const action = data.action;
     
+    // BASIC API SECURITY
+    const API_KEY = "aiot2026@"; // Or validate against a secret
+    if (data.token !== API_KEY) {
+      throw new Error('Unauthorized Access: Invalid API Token');
+    }
+    
     if (action === 'checkout') {
       return handleCheckout(data);
     } else if (action === 'checkin') {
@@ -224,6 +230,15 @@ function doPost(e) {
       message: error.toString()
     })).setMimeType(ContentService.MimeType.JSON);
   }
+}
+
+function sanitize(input) {
+  if (typeof input !== 'string') return input;
+  // Prevent CSV/Formula Injection
+  if (/^[=\+\-@]/.test(input)) {
+    return "'" + input; 
+  }
+  return input;
 }
 
 function handleCheckout(data) {
@@ -246,7 +261,8 @@ function handleCheckout(data) {
   
   let rowIndex = -1;
   for (let i = headerRowIndex + 1; i < assetData.length; i++) {
-    if (assetData[i][codeIdx] === data.assetCode) {
+    const code = assetData[i][codeIdx] ? String(assetData[i][codeIdx]).trim() : `NO-CODE-${i - 1}`;
+    if (code === data.assetCode) {
       rowIndex = i + 1;
       break;
     }
@@ -255,14 +271,14 @@ function handleCheckout(data) {
   if (rowIndex === -1) throw new Error('Asset not found');
   
   assetSheet.getRange(rowIndex, statusIdx + 1).setValue('In Use');
-  if (holderIdx !== -1) assetSheet.getRange(rowIndex, holderIdx + 1).setValue(data.holderName);
-  if (projectIdx !== -1) assetSheet.getRange(rowIndex, projectIdx + 1).setValue(data.projectId);
+  if (holderIdx !== -1) assetSheet.getRange(rowIndex, holderIdx + 1).setValue(sanitize(data.holderName));
+  if (projectIdx !== -1) assetSheet.getRange(rowIndex, projectIdx + 1).setValue(sanitize(data.projectId));
   
   const transSheet = ss.getSheetByName('TRANSACTIONS');
   if (transSheet) {
     const txId = 'TX-' + new Date().getTime();
     transSheet.appendRow([
-      txId, data.assetCode, data.holderName, 'CHECK_OUT', data.projectId, new Date(), data.expectedReturnDate, '', '', '', data.notes
+      txId, sanitize(data.assetCode), sanitize(data.holderName), 'CHECK_OUT', sanitize(data.projectId), new Date(), sanitize(data.expectedReturnDate), '', '', '', sanitize(data.notes)
     ]);
   }
   
@@ -291,7 +307,8 @@ function handleCheckin(data) {
   let rowIndex = -1;
   let currentHolder = '';
   for (let i = headerRowIndex + 1; i < assetData.length; i++) {
-    if (assetData[i][codeIdx] === data.assetCode) {
+    const code = assetData[i][codeIdx] ? String(assetData[i][codeIdx]).trim() : `NO-CODE-${i - 1}`;
+    if (code === data.assetCode) {
       rowIndex = i + 1;
       currentHolder = holderIdx !== -1 ? assetData[i][holderIdx] : '';
       break;
@@ -303,13 +320,13 @@ function handleCheckin(data) {
   assetSheet.getRange(rowIndex, statusIdx + 1).setValue('Available');
   if (holderIdx !== -1) assetSheet.getRange(rowIndex, holderIdx + 1).setValue('');
   if (projectIdx !== -1) assetSheet.getRange(rowIndex, projectIdx + 1).setValue('');
-  if (conditionIdx !== -1 && data.condition) assetSheet.getRange(rowIndex, conditionIdx + 1).setValue(data.condition);
+  if (conditionIdx !== -1 && data.condition) assetSheet.getRange(rowIndex, conditionIdx + 1).setValue(sanitize(data.condition));
   
   const transSheet = ss.getSheetByName('TRANSACTIONS');
   if (transSheet) {
     const txId = 'TX-' + new Date().getTime();
     transSheet.appendRow([
-      txId, data.assetCode, currentHolder, 'CHECK_IN', '', new Date(), '', new Date(), data.condition, '', data.notes
+      txId, sanitize(data.assetCode), currentHolder, 'CHECK_IN', '', new Date(), '', new Date(), sanitize(data.condition), '', sanitize(data.notes)
     ]);
   }
   

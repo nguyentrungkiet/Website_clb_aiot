@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from 'react';
-import { postLabData } from '@/lib/api/lab';
+import { Asset } from '@/lib/api/lab';
+import { submitLabTransaction } from '@/app/[locale]/lab/actions';
 
 interface AssetActionsProps {
   assetCode: string;
@@ -35,7 +36,7 @@ export function AssetActions({ assetCode, status, currentHolder, currentProject 
       notes
     };
     
-    const res = await postLabData('checkout', payload);
+    const res = await submitLabTransaction('checkout', payload);
     setLoading(false);
     
     if (res.success) {
@@ -53,12 +54,13 @@ export function AssetActions({ assetCode, status, currentHolder, currentProject 
     setMessage('');
     
     const payload = {
+      type: 'checkin',
       assetCode,
       condition,
       notes
     };
     
-    const res = await postLabData('checkin', payload);
+    const res = await submitLabTransaction('checkin', payload);
     setLoading(false);
     
     if (res.success) {
