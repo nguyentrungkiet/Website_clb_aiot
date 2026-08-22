@@ -2,6 +2,8 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Link } from "@/i18n/routing";
 import { LayoutDashboard, Package, Wrench, Boxes, FileText } from "lucide-react";
+import { cookies } from "next/headers";
+import { LabLoginForm } from "@/components/lab/LabLoginForm";
 
 export const metadata = {
   title: "ISA Lab Management System",
@@ -12,11 +14,28 @@ export const metadata = {
   },
 };
 
-export default function LabLayout({
+export default async function LabLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const cookieStore = await cookies();
+  const isAuthenticated = cookieStore.get('lab_access')?.value === 'true';
+
+  if (!isAuthenticated) {
+    return (
+      <>
+        <Navbar />
+        <main className="flex-1 bg-light-bg dark:bg-background min-h-screen">
+          <div className="container mx-auto px-4 md:px-6 py-8">
+            <LabLoginForm />
+          </div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
   return (
     <>
       <Navbar />
