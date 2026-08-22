@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Asset } from '@/lib/api/lab';
 import { submitLabTransaction } from '@/app/[locale]/lab/actions';
 
 interface AssetActionsProps {
