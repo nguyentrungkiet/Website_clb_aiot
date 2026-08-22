@@ -10,7 +10,7 @@ export async function verifyLabPassword(password: string) {
     const cookieStore = await cookies();
     const secureToken = Buffer.from(`${password}_aiot_secure_token`).toString('base64');
     
-    cookieStore.set('lab_access', secureToken, {
+    cookieStore.set('lab_access_session', secureToken, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
@@ -25,7 +25,7 @@ export async function verifyLabPassword(password: string) {
 
 export async function logoutLab() {
   const cookieStore = await cookies();
-  cookieStore.delete('lab_access');
+  cookieStore.delete('lab_access_session');
 }
 
 export async function submitLabTransaction(action: string, payload: any) {
@@ -35,7 +35,7 @@ export async function submitLabTransaction(action: string, payload: any) {
   // Verify cookie first
   const cookieStore = await cookies();
   const secureToken = Buffer.from(`${correctPassword}_aiot_secure_token`).toString('base64');
-  if (cookieStore.get('lab_access')?.value !== secureToken) {
+  if (cookieStore.get('lab_access_session')?.value !== secureToken) {
     throw new Error('Unauthorized');
   }
 
